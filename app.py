@@ -172,11 +172,11 @@ with st.sidebar:
     st.success("🔑 API keys loaded" if openrouter_key and groq_key else "⚠️ API keys missing in Secrets")
     st.markdown("---")
     st.markdown("**🌐 Language**")
-    lang = st.selectbox("Language", ["English", "Hindi", "Telugu", "Tamil", "French", "Spanish", "German", "Japanese", "Korean", "Chinese"],
+    lang = st.selectbox("Language", ["en", "hi", "te", "ta", "fr", "es", "de", "ja", "ko", "zh"],
                         label_visibility="collapsed")
-    lang_names = {"English":"English","Hindi":"Hindi","Telugu":"Telugu","Tamil":"Tamil",
-                  "French":"French","Spanish":"Spanish","German":"German","Japanese":"Japanese",
-                  "Korean":"Korean","Chinese":"Chinese"}
+    lang_names = {"en":"English","hi":"Hindi","te":"Telugu","ta":"Tamil",
+                  "fr":"French","es":"Spanish","de":"German","ja":"Japanese",
+                  "ko":"Korean","zh":"Chinese"}
     st.caption(f"Transcribing in: **{lang_names.get(lang, lang)}**")
     st.markdown("---")
     if st.button("🗑️ Clear conversation"):
